@@ -1,0 +1,61 @@
+<html lang="pt-br">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container col-md-4 mt-5">
+
+        <div class="row align-items-center border border-info ">
+                <div class="col col-lg-4 mt-4 align-content-between">
+
+                    <div >
+                        <div class="mb-4 p-0">
+                          <label for="cep_input" class="form-label">Digite o CEP:</label>
+                          <input id="input" style="max-width: 20rem;" type="text" class="form-control" aria-describedby="cepHelp">
+                          <div id="cepHelp" class="form-text">Cep apenas números.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-lg-6 mt-3 align-content-between">
+                    <button id="btnSubmit"  class="btn btn-primary">Pesquisar</button>    .
+                </div>
+
+        </div>
+
+        <table  class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">CEP</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Logradouro</th>
+            
+              </tr>
+            </thead>
+            <tbody id="t_body">
+
+            </tbody>
+       
+    </div>
+    
+   
+    
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script type="module" src="./index.js"></script>
+<script src="https://unpkg.com/imask">
+
+  var element = document.getElementById('input');
+  var maskOptions = {
+    mask: /^[0-9]\d{8,8}$/
+  };
+  var mask = IMask(element, maskOptions);
+</script>
+
+</html>
